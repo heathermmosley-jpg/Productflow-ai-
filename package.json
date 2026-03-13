@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next.js": "latest",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "@google/generative-ai": "latest"
