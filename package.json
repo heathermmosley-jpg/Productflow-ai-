@@ -1,3 +1,4 @@
+
 {
   "name": "productflow-ai",
   "version": "0.1.0",
@@ -9,13 +10,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "next": "14.2.35",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "@google/generative-ai": "latest",
-    "typescript": "5.4.5",
-    "@types/react": "18.2.66",
-    "@types/node": "20.11.30"
+    "lucide-react": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "autoprefixer": "latest"
   }
 }
 
