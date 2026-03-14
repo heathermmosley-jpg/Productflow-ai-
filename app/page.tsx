@@ -10,7 +10,6 @@ export default function Home() {
     setLoading(true);
     try {
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`, {
-        
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -26,7 +25,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '50px auto', padding: '20px', fontFamily: 'sans-serif', border: '1px solid #eee', borderRadius: '15px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+    <div style={{ maxWidth: '600px', margin: '50px auto', padding: '20px', fontFamily: 'sans-serif', border: '1px solid #eee', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
       <h1 style={{ textAlign: 'center', color: '#333' }}>🚀 ProductFlow AI</h1>
       <p style={{ textAlign: 'center', color: '#666' }}>Generate professional descriptions in seconds.</p>
       
@@ -40,19 +39,17 @@ export default function Home() {
         />
         <button 
           onClick={generateDescription}
-          disabled={loading || !input}
-          style={{ width: '100%', padding: '12px', backgroundColor: '#0070f3', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}
+          disabled={loading}
+          style={{ width: '100%', padding: '15px', backgroundColor: '#0070f3', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}
         >
-          {loading ? 'AI is thinking...' : 'Generate Description'}
+          {loading ? 'Generating...' : 'Generate Description'}
         </button>
       </div>
 
-      {result && (
-        <div style={{ marginTop: '30px', padding: '15px', backgroundColor: '#f9f9f9', borderRadius: '8px', borderLeft: '4px solid #0070f3', whiteSpace: 'pre-wrap' }}>
-          <strong>Result:</strong><br/>
-          {result}
-        </div>
-      )}
+      <div style={{ marginTop: '30px', padding: '20px', backgroundColor: '#f9f9f9', borderRadius: '8px', borderLeft: '4px solid #0070f3' }}>
+        <strong>Result:</strong>
+        <p style={{ whiteSpace: 'pre-wrap', lineHeight: '1.6', color: '#444' }}>{result || 'Your AI description will appear here...'}</p>
+      </div>
     </div>
   );
-                  }
+}
