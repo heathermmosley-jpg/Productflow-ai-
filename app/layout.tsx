@@ -1,8 +1,3 @@
-export const metadata = {
-  title: 'ProductFlow AI',
-  description: 'Generate product descriptions easily',
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -14,4 +9,5 @@ export default function RootLayout({
     </html>
   )
 }
+
 
