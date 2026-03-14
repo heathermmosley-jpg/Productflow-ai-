@@ -9,7 +9,8 @@ export default function Home() {
   const generateDescription = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`, {
+        
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
