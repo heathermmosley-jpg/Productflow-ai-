@@ -1,5 +1,5 @@
-"use client";  
 import './globals.css';
+"use client";  
 export default function Page() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
