@@ -32,27 +32,28 @@ export default function Page() {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto', fontFamily: 'sans-serif' }}>
+    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto', fontFamily: 'sans-serif', color: 'black', backgroundColor: 'white', minHeight: '100vh' }}>
       <h1>ProductFlowAI Beta</h1>
+      <p>Transforming CRPS Protocols & Content Systems</p>
       <textarea 
         value={input} 
         onChange={(e) => setInput(e.target.value)} 
-        placeholder="Enter your CRPS symptoms or content ideas..."
-        style={{ width: '100%', height: '100px', padding: '10px', marginBottom: '10px', color: 'black' }}
+        placeholder="Describe your pain level or content goal..."
+        style={{ width: '100%', height: '150px', padding: '10px', marginBottom: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
       />
       <button 
         onClick={generateDescription} 
         disabled={loading}
-        style={{ padding: '10px 20px', backgroundColor: '#0070f3', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+        style={{ padding: '12px 24px', backgroundColor: '#000', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}
       >
-        {loading ? "Generating..." : "Run AI System"}
+        {loading ? "Processing..." : "Generate Transformation"}
       </button>
       {result && (
-        <div style={{ marginTop: '20px', padding: '15px', border: '1px solid #ddd', borderRadius: '5px', backgroundColor: '#f9f9f9', color: 'black' }}>
-          <strong>Result:</strong>
-          <p style={{ whiteSpace: 'pre-wrap' }}>{result}</p>
+        <div style={{ marginTop: '20px', padding: '15px', border: '1px solid #eee', borderRadius: '8px', backgroundColor: '#fdfdfd' }}>
+          <strong>System Output:</strong>
+          <p style={{ whiteSpace: 'pre-wrap', marginTop: '10px' }}>{result}</p>
         </div>
       )}
     </div>
   );
-}
+          }
