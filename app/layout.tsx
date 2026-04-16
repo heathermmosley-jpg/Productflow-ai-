@@ -1,9 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 
+// This is the "Metadata" the error message was asking for
 export const metadata: Metadata = {
   title: 'ProductFlowAI - Content Multiplier',
-  description: 'Instantly repurpose your content',
+  description: 'Instantly multiply your content across platforms',
 }
 
 export default function RootLayout({
@@ -13,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
