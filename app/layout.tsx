@@ -1,4 +1,10 @@
-import "./globals.css";  // <--- THIS IS THE MISSING KEY
+import './globals.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'ProductFlowAI - Content Multiplier',
+  description: 'Instantly repurpose your content',
+}
 
 export default function RootLayout({
   children,
@@ -7,10 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-900">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
-
-
-
