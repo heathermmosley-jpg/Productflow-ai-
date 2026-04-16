@@ -3,14 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 5, 5, 8;
-  --background-end-rgb: 0, 0, 0;
+  --background: 5 5 8;
+  --foreground: 255 255 255;
 }
 
 body {
   background: #050508;
   color: white;
   margin: 0;
-  font-family: sans-serif;
 }
